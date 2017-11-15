@@ -1,6 +1,5 @@
 <div id="main">
 
-    @include('blog.intro');
     @include('blog.featuredpost');
     @include('blog.posts');
 
