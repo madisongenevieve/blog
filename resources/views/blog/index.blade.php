@@ -1,37 +1,24 @@
-<!DOCTYPE HTML>
-<!--
-	Her Intranet of Things
-	Madison Genevieve Blog
--->
-<html>
-	<head>
-		<title>Madison Genevieve</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="./css/main.css" />
-		<noscript><link rel="stylesheet" href="./css/noscript.css" /></noscript>
-	</head>
-	<body class="is-loading">
-				
-				<!-- Intro -->
-					@include('blog.intro');
+@extends('layout')
 
-				<!-- Nav -->
-					@include('blog.nav');
+@section('content')
+<div id="main">
 
-				<!-- Main -->
-					@include('blog.main');
+		@include('blog.featuredpost');
+		@include('blog.posts');
 
-				<!-- Footer -->
-					@include('blog.footer');
-
-		<!-- Scripts -->
-			<script src="./js/jquery.min.js"></script>
-			<script src="./js/jquery.scrollex.min.js"></script>
-			<script src="./js/jquery.scrolly.min.js"></script>
-			<script src="./js/skel.min.js"></script>
-			<script src="./js/util.js"></script>
-			<script src="./js/main.js"></script>
-
-	</body>
-</html>
+<!-- Footer -->
+	<footer>
+		<div class="pagination">
+			<!--<a href="#" class="previous">Prev</a>-->
+			<a href="#" class="page active">1</a>
+			<a href="#" class="page">2</a>
+			<a href="#" class="page">3</a>
+			<span class="extra">&hellip;</span>
+			<a href="#" class="page">8</a>
+			<a href="#" class="page">9</a>
+			<a href="#" class="page">10</a>
+			<a href="#" class="next">Next</a>
+		</div>
+	</footer>
+</div>
+@endsection
